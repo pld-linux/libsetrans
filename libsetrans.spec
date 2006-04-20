@@ -41,11 +41,23 @@ libsetrans udostêpnia bibliotekê t³umaczenia kategorii SELinuksa z
 reprezentacji wewnêtrznych na reprezentacje zdefiniowane przez
 u¿ytkownika.
 
+%package devel
+Summary:	Development fiels for libsetrans library
+Summary(pl):	Pliki programistyczne biblioteki libsetrans
+Group:		Development/Libraries
+Requires:	%{name} = %{version}-%{release}
+
+%description devel
+Development fiels for libsetrans library.
+
+%description devel -l pl
+Pliki programistyczne biblioteki libsetrans.
+
 %package static
 Summary:	Static libsetrans library
 Summary(pl):	Statyczna biblioteka libsetrans
 Group:		Development/Libraries
-Requires:	%{name} = %{version}-%{release}
+#Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static libsetrans library.
@@ -69,14 +81,20 @@ Narzêdzia dla libsetrans.
 %setup -q
 
 %build
-%{__make}
+%{__make} \
+	CC="%{__cc}" \
+	CFLAGS="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
+
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
 	LIBDIR=$RPM_BUILD_ROOT%{_libdir} \
 	SHLIBDIR=$RPM_BUILD_ROOT/%{_lib}
+
+# across /, so make it absolute
+ln -nsf /%{_lib}/libsetrans.so.0 $RPM_BUILD_ROOT%{_libdir}/libsetrans.so
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -86,12 +104,17 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc ChangeLog
 %attr(755,root,root) /%{_lib}/libsetrans.so.0
 %{_mandir}/man8/mcs.8*
 
+%files devel
+%defattr(644,root,root,755)
+%attr(755,root,root) %{_libdir}/libsetrans.so
+
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/*
+%{_libdir}/libsetrans.a
 
 %files utils
 %defattr(644,root,root,755)
