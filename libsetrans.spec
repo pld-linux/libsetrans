@@ -1,5 +1,5 @@
 Summary:	SELinux Translation library
-Summary(pl):	Biblioteka t³umaczenia SELinuksa
+Summary(pl.UTF-8):   Biblioteka tÅ‚umaczenia SELinuksa
 Name:		libsetrans
 Version:	0.1.20
 Release:	0.9
@@ -24,58 +24,58 @@ Multi-level Security.
 libsetrans provides an translation library to translate SELinux categories
 from internal representations to user defined representation.
 
-%description -l pl
-Security-enhanced Linux jest prototypem j±dra Linuksa i wielu
-aplikacji u¿ytkowych o funkcjach podwy¿szonego bezpieczeñstwa.
-Zaprojektowany jest tak, aby w prosty sposób ukazaæ znaczenie
-obowi±zkowej kontroli dostêpu dla spo³eczno¶ci linuksowej. Ukazuje
-równie¿ jak tak± kontrolê mo¿na dodaæ do istniej±cego systemu typu
-Linux. J±dro SELinux zawiera nowe sk³adniki architektury pierwotnie
-opracowane w celu ulepszenia bezpieczeñstwa systemu operacyjnego
-Flask. Te elementy zapewniaj± ogólne wsparcie we wdra¿aniu wielu 
-typów polityk obowi±zkowej kontroli dostêpu, w³±czaj±c te wzorowane 
-na: Type Enforcement (TE), kontroli dostêpu opartej na rolach (RBAC) 
+%description -l pl.UTF-8
+Security-enhanced Linux jest prototypem jÄ…dra Linuksa i wielu
+aplikacji uÅ¼ytkowych o funkcjach podwyÅ¼szonego bezpieczeÅ„stwa.
+Zaprojektowany jest tak, aby w prosty sposÃ³b ukazaÄ‡ znaczenie
+obowiÄ…zkowej kontroli dostÄ™pu dla spoÅ‚ecznoÅ›ci linuksowej. Ukazuje
+rÃ³wnieÅ¼ jak takÄ… kontrolÄ™ moÅ¼na dodaÄ‡ do istniejÄ…cego systemu typu
+Linux. JÄ…dro SELinux zawiera nowe skÅ‚adniki architektury pierwotnie
+opracowane w celu ulepszenia bezpieczeÅ„stwa systemu operacyjnego
+Flask. Te elementy zapewniajÄ… ogÃ³lne wsparcie we wdraÅ¼aniu wielu 
+typÃ³w polityk obowiÄ…zkowej kontroli dostÄ™pu, wÅ‚Ä…czajÄ…c te wzorowane 
+na: Type Enforcement (TE), kontroli dostÄ™pu opartej na rolach (RBAC) 
 i zabezpieczeniach wielopoziomowych.
 
-libsetrans udostêpnia bibliotekê t³umaczenia kategorii SELinuksa z
-reprezentacji wewnêtrznych na reprezentacje zdefiniowane przez
-u¿ytkownika.
+libsetrans udostÄ™pnia bibliotekÄ™ tÅ‚umaczenia kategorii SELinuksa z
+reprezentacji wewnÄ™trznych na reprezentacje zdefiniowane przez
+uÅ¼ytkownika.
 
 %package devel
 Summary:	Development fiels for libsetrans library
-Summary(pl):	Pliki programistyczne biblioteki libsetrans
+Summary(pl.UTF-8):   Pliki programistyczne biblioteki libsetrans
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Development fiels for libsetrans library.
 
-%description devel -l pl
+%description devel -l pl.UTF-8
 Pliki programistyczne biblioteki libsetrans.
 
 %package static
 Summary:	Static libsetrans library
-Summary(pl):	Statyczna biblioteka libsetrans
+Summary(pl.UTF-8):   Statyczna biblioteka libsetrans
 Group:		Development/Libraries
 #Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static libsetrans library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna biblioteka libsetrans.
 
 %package utils
 Summary:	libsetrans utils
-Summary(pl):	Narzêdzia dla libsetrans
+Summary(pl.UTF-8):   NarzÄ™dzia dla libsetrans
 Group:		Applications
 Requires:	%{name} = %{version}-%{release}
 
 %description utils
 libsetrans utils.
 
-%description utils -l pl
-Narzêdzia dla libsetrans.
+%description utils -l pl.UTF-8
+NarzÄ™dzia dla libsetrans.
 
 %prep
 %setup -q
