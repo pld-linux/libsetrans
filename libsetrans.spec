@@ -1,5 +1,5 @@
 Summary:	SELinux Translation library
-Summary(pl.UTF-8):   Biblioteka tłumaczenia SELinuksa
+Summary(pl.UTF-8):	Biblioteka tłumaczenia SELinuksa
 Name:		libsetrans
 Version:	0.1.20
 Release:	0.9
@@ -43,7 +43,7 @@ użytkownika.
 
 %package devel
 Summary:	Development fiels for libsetrans library
-Summary(pl.UTF-8):   Pliki programistyczne biblioteki libsetrans
+Summary(pl.UTF-8):	Pliki programistyczne biblioteki libsetrans
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -55,7 +55,7 @@ Pliki programistyczne biblioteki libsetrans.
 
 %package static
 Summary:	Static libsetrans library
-Summary(pl.UTF-8):   Statyczna biblioteka libsetrans
+Summary(pl.UTF-8):	Statyczna biblioteka libsetrans
 Group:		Development/Libraries
 #Requires:	%{name}-devel = %{version}-%{release}
 
@@ -67,7 +67,7 @@ Statyczna biblioteka libsetrans.
 
 %package utils
 Summary:	libsetrans utils
-Summary(pl.UTF-8):   Narzędzia dla libsetrans
+Summary(pl.UTF-8):	Narzędzia dla libsetrans
 Group:		Applications
 Requires:	%{name} = %{version}-%{release}
 
